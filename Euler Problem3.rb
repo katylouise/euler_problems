@@ -1,24 +1,17 @@
+require 'prime'
 
-def is_prime(n)
-	for i in 2...n
-		return false if n % i == 0
-	end
-	return true
-end
-
-
-def primes(n)
+def primes_to_n(n)
 	primes = []
-	for i in 2..n
-		primes << i if is_prime(i)
-	end
+	Prime.each{ |n| primes << n }
 	primes
 end
 
-puts primes(60)
-def prime_factors(n)
-	prime_nums = primes(n)
+def largest_prime_factor(n)
+	prime_factors = []
+	return prime_factors.max if n == 1
+	prime_nums = primes_to_n(n)
 	prime_factors = prime_nums.select{ |x| n % x == 0 }
+	prime_factors.max
 end
 
-puts prime_factors(70)
+puts largest_prime_factor(600851475143)
