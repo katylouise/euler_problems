@@ -1,20 +1,9 @@
 require 'prime'
 
-def primes_to_n(n)
-	primes = []
-	Prime.each(n / 2){ |n| primes << n }
-	primes
-end
-
 def largest_prime_factor(n)
-	prime_factors = []
-	if n == 1
-		return prime_factors.max
-	else
-
-	prime_nums = primes_to_n(n)
-	prime_factors = prime_nums.select{ |x| n % x == 0 }
-	prime_factors.max
+	prime_factor = (2..n).find{ |i| n % i == 0 && Prime.prime?(i)}
+	new_num = n / prime_factor
+	new_num == 1 ? prime_factor : largest_prime_factor(new_num)
 end
 
-puts primes_to_n(100)
+p largest_prime_factor(600851475143)
