@@ -5,5 +5,3 @@ def largest_prime_factor(n)
 	new_num = n / prime_factor
 	new_num == 1 ? prime_factor : largest_prime_factor(new_num)
 end
-
-p largest_prime_factor(600851475143)
