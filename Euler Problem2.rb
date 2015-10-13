@@ -7,8 +7,7 @@ def fibonacci(n)
 	fib_array.each do |x|
 		total += x if x % 2 == 0
 	end
-	puts total
+	total
 end
-
 
 puts fibonacci(29)
