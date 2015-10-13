@@ -1,4 +1,4 @@
 euler_problems
 ==============
 
-Solutions to some of the Euler Problems
+Solutions to some of the Euler Problems:
