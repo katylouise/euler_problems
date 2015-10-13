@@ -1,4 +1,4 @@
-girequire 'prime'
+require 'prime'
 
 def largest_prime_factor(n)
 	prime_factor = (2..n).find{ |i| n % i == 0 && Prime.prime?(i)}
