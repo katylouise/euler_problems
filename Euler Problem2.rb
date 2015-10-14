@@ -15,5 +15,4 @@ def sum_fibonacci(n)
   even_fibonacci(arr).inject(:+)
 end
 
-
 p sum_fibonacci(29)
