@@ -1,13 +1,19 @@
-def fibonacci(n)
+def generate_fibonacci(n)
 	fib_array = [1, 2]
-	for i in 0..n
+	(0..n).each do |i|
 		fib_array << (fib_array[i] + fib_array[i + 1])
 	end
-	total = 0
-	fib_array.each do |x|
-		total += x if x % 2 == 0
-	end
-	total
+  fib_array
 end
 
-puts fibonacci(29)
+def even_fibonacci(arr)
+  arr.select{ |x| x % 2 == 0 }
+end
+
+def sum_fibonacci(n)
+  arr = generate_fibonacci(n)
+  even_fibonacci(arr).inject(:+)
+end
+
+
+p sum_fibonacci(29)

@@ -8,5 +8,7 @@ def sum_multiples_three_five(n)
   total
 end
 
+p sum_multiples_three_five(1000)
+
 
 
