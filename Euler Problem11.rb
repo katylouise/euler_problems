@@ -9,15 +9,17 @@ def triangle_number(n)
 end
 
 def triangle_factors
-  n = 21736
-  factor_count = 0
-  while factor_count < 375 do
+  n = 10000
+  max_factor_count = 0
+  while max_factor_count < 250 do
     unless Prime.prime?(n)
       factor_count = factors(triangle_number(n)).length
+      max_factor_count = factor_count if factor_count > max_factor_count
     end
     n += 1
   end
   return n
 end
 
-p triangle_factors
+p triangle_number
+p triangle_number(12375)
